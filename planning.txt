@@ -1,0 +1,90 @@
+Jobs
+
+Job_Seeker
+> Signup - P
+> Login - P
+> Dashboard - P 
+> Update Skills - N
+> Update Profile - N
+> Post resume - N
+> Apply for job - P
+> Inbox - N
+
+Employer
+> Signup - P
+> Login - P
+> Dashboard - P
+> Company Information - P
+> Post a job - P
+> Favorite job seeker - N
+> Send message to job seeker - N
+
+Public
+> View home - P
+> Search - N
+
+Design Database Scheme
+
+users
+user_id, email, name, 
+password, salt, timestamp, 
+type
+
+company_information
+company_id, name, user_id, timestamp, description, location
+
+jobs
+job_id, title, description, timestamp, deadline, user_id
+
+skills
+skill_id, title, timestamp
+
+job_seeker_skills
+id, skill_id, user_id
+
+job_skills
+id, skill_id, job_id
+
+inbox
+id, sent_to, sent_by, message, timestamp
+
+favorites
+id, job_seeker_id, employer_id, timestamp, job_id
+
+------------------------------------------------------
+
+Setting up codeigniter
+
+- copy ci files in project folder
+
+- make .htaccess in project folder and paste content from internet
+
+- check if welcome is working without index.php
+
+- set database settings
+
+- autoload libraries [database, session] and helpers => [url, file, form]
+
+- change base_url to project url in config->config.php->base_url , remove value 'index.php' from config -> config.php -> index_page
+
+- Set encryption key to a random value in config.php
+
+------------------------------------------------------
+
+URL planning
+
+/ => Show home page
+
+/user/register => show registration page - P
+
+/user => login - P
+
+/job_seeker => job_seeker dashboard - A
+
+/employer => employer dashboard - A
+
+------------------------------------------------------
+
+
+
+
