@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Job_seeker extends CI_Controller {
 
 	/**
-	 * Index Page for this controller.
+	 *  for this controller.
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
